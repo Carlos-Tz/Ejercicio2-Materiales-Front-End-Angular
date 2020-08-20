@@ -1,0 +1,28 @@
+<div class="container pt-2">
+    <div class="row justify-content-sm-center">
+        <div class="col-sm-12 col-md-8">
+            <div class="card">
+                <div class="card-body" [formGroup]="myForm">
+                    <p class="card-title h6" style="text-align: center;">Nuevo Material</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <input type="text" class="form-control" formControlName="name" placeholder="Nombre **">
+                        </li>
+                        <li class="list-group-item">
+                            <input type="text" class="form-control" formControlName="unit" placeholder="Unidad de medida **">
+                        </li>
+                        <li class="list-group-item">
+                            <input type="number" min="0" class="form-control" formControlName="price" placeholder="Precio **">
+                        </li>
+                        <li class="list-group-item">
+                            <input type="number" min="0" class="form-control" formControlName="stock" placeholder="Stock **">
+                        </li>
+                        <li class="list-group-item">
+                            <button class="btn btn-outline-success btn-block" type="button" (click)="submitData()" [disabled]="!myForm.valid">Guardar</button>
+                        </li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
